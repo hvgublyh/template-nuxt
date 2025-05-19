@@ -1,37 +1,74 @@
 {
-  "name": "gp1.0",
-  "version": "1.0.0",
-  "private": true,
+  "name": "nuxt3-template-demo",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.12.3",
+  "description": "nuxt3 TS unocss pinia arco",
+  "author": "LUDA0831 <445001382@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/LUDA0831/nuxt3-template-demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LUDA0831/nuxt3-template-demo"
+  },
+  "bugs": "https://github.com/LUDA0831/nuxt3-template-demo/issues",
+  "keywords": [
+    "nuxt3-template-demo",
+    "nuxt3",
+    "template"
+  ],
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev -o",
+    "clean": "nuxt cleanup",
+    "analyze": "nuxt analyze",
     "generate": "nuxt generate",
-    "test": "jest"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare && npx simple-git-hooks",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.5",
-    "cookie-universal-nuxt": "^2.1.4",
-    "core-js": "^3.6.5",
-    "element-ui": "^2.13.2",
-    "hls.js": "^0.14.16",
-    "nuxt": "^2.14.6",
-    "qiniu-js": "^3.1.2",
-    "ua-parser-js": "^0.7.22",
-    "vue-infinite-scroll": "^2.0.2",
-    "wangeditor": "^4.6.1",
-    "xgplayer": "^2.13.0",
-    "xgplayer-hls.js": "^2.2.5",
-    "xgplayer-mp4": "^1.2.0",
-    "xgplayer-music": "^2.2.0"
+    "@unocss/reset": "66.1.0-beta.7",
+    "dayjs": "^1.11.13",
+    "dplayer": "^1.27.1",
+    "pinia": "^3.0.1",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
-    "@vue/test-utils": "^1.1.0",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^26.5.0",
-    "jest": "^26.5.0",
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0",
-    "vue-jest": "^3.0.4"
+    "@antfu/eslint-config": "^4.11.0",
+    "@arco-design/web-vue": "^2.57.0",
+    "@element-plus/nuxt": "^1.1.2",
+    "@iconify-json/mdi": "^1.2.3",
+    "@pinia/nuxt": "^0.10.1",
+    "@types/dplayer": "^1.25.5",
+    "@unocss/eslint-config": "66.1.0-beta.7",
+    "@unocss/nuxt": "66.1.0-beta.7",
+    "@unocss/preset-rem-to-px": "66.1.0-beta.7",
+    "@vueuse/core": "^13.0.0",
+    "@vueuse/nuxt": "^13.0.0",
+    "arco-design-nuxt-module": "^0.2.1",
+    "dayjs-nuxt": "^2.1.11",
+    "eslint": "^9.23.0",
+    "eslint-plugin-format": "^1.0.1",
+    "lint-staged": "^15.5.0",
+    "lottie-web": "^5.12.2",
+    "nuxt": "^3.16.1",
+    "nuxt-lodash": "^2.5.3",
+    "nuxt-swiper": "^2.0.0",
+    "pinia-plugin-persistedstate": "^4.2.0",
+    "simple-git-hooks": "^2.12.1",
+    "typescript": "^5.8.2",
+    "unocss": "66.1.0-beta.7",
+    "vite": "^6.2.3",
+    "vite-plugin-compression2": "^1.3.3",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
